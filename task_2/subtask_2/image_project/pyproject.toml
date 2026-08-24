@@ -1,0 +1,19 @@
+[project]
+name = "image-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Moaaz Mohamed", email = "Moaazmoh@icloud.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pillow>=12.3.0",
+]
+
+[project.scripts]
+image-project = "image_project:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
