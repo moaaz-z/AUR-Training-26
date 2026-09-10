@@ -1,0 +1,9 @@
+task1_controller:
+  ros__parameters:
+    target_x: 8.0
+    target_y: 8.0
+    linear_gain: 1.0
+    angular_gain: 4.0
+    distance_tolerance: 0.1
+    angle_tolerance: 0.05
+    loop_rate_hz: 10.0
