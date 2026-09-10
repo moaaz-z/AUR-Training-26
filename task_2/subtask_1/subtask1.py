@@ -1,7 +1,7 @@
 stock = {}
 import time 
 try:
-    with open(r"C:\Users\Hello\Desktop\AUR-Training-26\task_2\subtask_1\stock.txt", "r") as f:
+    with open(r"/home/moaaz/Desktop/VS code/AUR-Training-26/task_2/subtask_1/stock.txt", "r") as f:
         for line in f:
             key, value = line.split(",")
             stock[key.lower()] = int(value)
@@ -9,7 +9,7 @@ try:
     print(stock)
 
 except Exception as e:
-    with open(r"C:\Users\Hello\Desktop\AUR-Training-26\task_2\subtask_1\stock.txt", "r") as f:
+    with open(r"/home/moaaz/Desktop/VS code/AUR-Training-26/task_2/subtask_1/stock.txt", "r") as f:
        for item in stock:
           f.write(item +","+str(stock[item])+"\n")
 
