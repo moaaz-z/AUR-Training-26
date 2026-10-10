@@ -72,10 +72,17 @@ class TurtleController(Node):
         msg = Twist()
 
         if distance <= self.distance_tolerance:
-            msg.linear.x = 0.0
-            msg.angular.z = 0.0
-            self.cmd_vel_pub.publish(msg)
-            return
+         msg.linear.x = 0.0
+         msg.angular.z = 0.0
+         self.cmd_vel_pub.publish(msg)
+
+        if not self.target_reached:
+         self.get_logger().info('Target reached!')
+         self.target_reached = True
+
+         return
+
+        self.target_reached = False
 
         msg.angular.z = self.angular_gain * angle_error
 
